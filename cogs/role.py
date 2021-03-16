@@ -18,11 +18,15 @@ class role(commands.Cog):
     
 
     @commands.command(name="gamejam", aliases=["GameJam", "Gamejam", "gj"])
-    async def game_jam(ctx):
+    async def game_jam(self, ctx):
         """
         gives the gamejam role to the user.
         """
-        await ctx.author.add_roles(get_jam_role(ctx.guild))
+        await ctx.author.add_roles(self.get_jam_role(ctx.guild))
+        embed = discord.Embed(color = discord.Color.green())
+        embed.set_author(name="Role Added 🎉")
+        embed.add_field(name="you've got the game jam role!")
+        await ctx.send(embed=embed)
 
 
 def setup(bot):
