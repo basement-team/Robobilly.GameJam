@@ -1,3 +1,4 @@
+import discord
 from discord.ext import commands
 
 
@@ -22,7 +23,7 @@ class role(commands.Cog):
         """
         gives the gamejam role to the user.
         """
-        await ctx.author.add_roles(self.get_jam_role(ctx.guild))
+        await ctx.author.add_roles(await self.get_jam_role(ctx.guild))
         embed = discord.Embed(color = discord.Color.green())
         embed.set_author(name="Role Added 🎉")
         embed.add_field(name="you've got the game jam role!")
