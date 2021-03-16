@@ -10,7 +10,7 @@ async def on_ready():
     print("session started")
 
 
-@client.command(name="ping", aliases=["ping", "pong"])
+@client.command(name="ping", aliases=["pong"])
 async def ping(ctx):
     await ctx.send(client.latency)
 
