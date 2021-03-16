@@ -25,8 +25,7 @@ class role(commands.Cog):
         """
         await ctx.author.add_roles(await self.get_jam_role(ctx.guild))
         embed = discord.Embed(color = discord.Color.green())
-        embed.set_author(name="Role Added 🎉")
-        embed.add_field(name="you've got the game jam role!")
+        embed.add_field(name="Role Added 🎉", value="you've got the game jam role!")
         await ctx.send(embed=embed)
 
 
