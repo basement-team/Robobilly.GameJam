@@ -1,2 +1,1 @@
-# gamejam-event-bot
-.
+# Robobilly.GameJam
